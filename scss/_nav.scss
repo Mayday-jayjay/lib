@@ -1,3 +1,248 @@
-h1{
-    background: red;
+// google font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: .3s linear;
 }
+html{
+    overflow-x: hidden;
+}
+
+body {
+    background: $grey;
+    overflow-x: hidden;
+  }
+// left nav
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $light;
+    height: 100%;
+    width: 280px;
+    transition: 0.3s ease;
+    overflow-x: hidden;
+    // scrollbar-width none 不會顯示捲軸，但該元素仍可捲動。https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width
+    scrollbar-width: none;
+    z-index: 2000;
+    // &::-webkit-scrollbar{
+    //     display: none;
+    // }
+    &.hide{
+        width: 60px;
+        .side-menu li a{
+            width:calc(48px - (4px * 2)) ;
+            transition: .3s ease;
+        }
+        ~.context{
+            width: calc(100% - 60px);
+            left: 60px;
+        }
+    }
+    .logo{
+        font-size: 1.5rem;
+        font-weight: 700;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        position: static;
+        top: 0;
+        left: 0;
+        padding-bottom: 20px;
+        box-sizing: content-box;
+        // box-sizing: border-box;
+        background: $light;
+        color: $blue;
+        z-index: 500;
+        i{
+            min-width: 60px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .side-menu{
+        width: 100%;
+        margin-top: 48px;
+        li{
+            height: 48px;
+            margin-left: 6px;
+            background: transparent;
+            border-radius: 48px 0 0 48px;
+            padding: 4px;
+            a{
+                background: $light;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                border-radius: 48px;
+                font-size: 1rem;
+                color: $dark;
+                white-space: nowrap;// 和 normal 一样合并空白符，但阻止源码中的文本换行。
+                overflow: hidden;
+                i{
+                    // margin-left: 15px;
+                    // padding-right: 10px;
+                    min-width: calc(60px - ((4px + 6px) *2));
+                    display: flex;
+                    justify-content: center;
+                }
+                &.logout{
+                    color: $red;
+                }
+
+            }
+        }
+        li.active{
+            position: relative;
+            background: $grey;
+            a{
+                color: $blue;
+            }
+            // 
+            &::before{
+                content: '';
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                right: 0;
+                top: -40px;
+                z-index: -1;
+                box-shadow: 20px 20px 0 $grey;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                right: 0;
+                bottom: -40px;
+                z-index: -1;
+                box-shadow: 20px -20px 0 $grey;
+            }
+        }
+        &.top li a:hover{
+            color: $blue;
+        }
+    }
+
+
+
+}
+// right context
+.context{
+    // background: red;
+    position: relative;
+    width: calc(100% - 280px);
+    left: 280px;
+    transition:all .3s ease;
+    nav{
+        height: 56px;
+        background: $light;
+        padding: 0 24px;
+        display: flex;
+        // background: red;
+        align-items: center;
+        gap: 24px;
+        position: static;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        a{
+            color: $dark;
+        }
+        .fa-bars{
+            cursor: pointer;
+            color: $dark;
+        }
+        .nav-link{
+            font-size: 1rem;
+            transition: 0.3s ease;
+            &:hover{
+                color: $blue;
+            }
+        }
+        form{
+            // background: red;
+            max-width: 400px;
+            width: 400px;
+            margin-right: auto;
+            .form-input{
+                display: flex;
+                align-items: center;
+                height: 36px;
+                input{
+                    flex-grow: 1;
+                    width: 100%;
+                    padding: 0 16px;
+                    height: 100%;
+                    border: none;
+                    background: $grey;
+                    border-radius: 36px 0 0 36px;
+                    outline: none;
+                    color: $dark;
+                }
+                button{
+                    width: 36px;
+                    height: 100%;
+                    font-size: 1rem;
+                    border: none;
+                    outline: none;
+                    // 左上 左右 右下 右左
+                    border-radius: 0 36px 36px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $blue;
+                    color: $light;
+                }
+            }
+            
+        }
+
+        .switch-mode{
+            display: block;
+            min-width: 50px;
+            height: 25px;
+            border-radius: 25px;
+            background: $grey;
+            cursor: pointer;
+            position: relative;
+            // background: red;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                bottom: 2px;
+                width: calc(25px - 4px);
+                // width: 20px;
+                background: $blue;
+                border-radius: 50%;
+                transition: .3s ease;
+            }
+        }
+        #switch-mode:checked + .switch-mode::before{
+            left: calc(100% - (25px - 4px) - 2px);
+            // left: 25px;
+            background: $dark;
+        }
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
