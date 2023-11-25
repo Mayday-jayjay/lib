@@ -19,26 +19,51 @@ navLink.forEach(item =>{
     })
 })
 
-
-
-
 // right context - menu-btn
 menuBar.addEventListener('click',()=>{
     sideBar.classList.toggle("hide");
 })
 
-// switchMode
+// switchMode change color
 switchMode.addEventListener("change",(e)=>{
     if(e.target.checked){
         document.body.classList.add("dark");
-        console.log("cc")
     }else{
         document.body.classList.remove("dark");
-        console.log("bb");
     }
 })
 
+
+
+
+// search
+let searchFrom = document.querySelector(".content nav form");
+let searchBtn = document.querySelector(".search-btn") ;
+let searchIcon = document.querySelector(".search-icon");
+
+searchBtn.addEventListener("click",(e)=>{
+    if(window.innerWidth < 576){
+        e.preventDefault();
+        searchFrom.classList.toggle("show");
+        if(searchFrom.classList.contains("show")){
+            searchIcon.classList.replace("fa-search","fa-times")
+        }else{
+            searchIcon.classList.replace("fa-times","fa-search")
+
+        }
+    }
+})
+
+
+
+
+
+// 
 window.addEventListener("resize",()=>{
+    if(window.innerWidth > 576){
+        searchIcon.classList.replace("fa-times","fa-search");
+        searchIcon.classList.remove("show");
+    }
     if(window.innerWidth < 768){
         sideBar.classList.add("hide");
     }else{
@@ -48,6 +73,5 @@ window.addEventListener("resize",()=>{
 // if(window.innerWidth > 768){
 //     sideBar.classList.add("hide");
 // }
-
 
 

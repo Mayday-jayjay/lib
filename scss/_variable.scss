@@ -1,5 +1,4 @@
-// nav
-    // $current-theme: light;
+// .light
     $light:#f9f9f9;
     $blue:#3c91e6;
     $light-blue:#cfe8ff;
@@ -7,14 +6,85 @@
     $dark-grey:#aaaaaa;
     $dark:#342e37;
     $red:#db504a;
-    $yello:#ffce26;
+    $yellow:#ffce26;
     $light-yellow:#fff2c6;
     $orange:#fd7238;
     $light-orange:#ffe0d3;
-    // body.dark{
-    //     $light:#0c0c1e !default;
-    //     $grey:#060714 !default;
-    //     $dark:#fbfbfb !default;
-    //     background: red ;
-    // }
-    // https://www.youtube.com/watch?v=9vMyoT7G7uA
+// .dark
+    $green: rgb(134, 180, 64);
+    $light2:#0c0c1e ;
+    $grey2:#060714 ;
+    $dark2:#fbfbfb ;
+
+    body.dark{
+        background: $grey2;
+        .sidebar{
+            background: $light2;
+            .logo{
+                background: $light2;
+                // color: $blue;
+            }
+
+            .side-menu {
+                li {
+                    a{
+                        background: $light2;
+                        color: $dark2;
+                        // &.logout{
+                        //     color: $red;
+                        // }
+                    }
+                    .side-menu li.active{
+                        background: $grey2;
+                    }
+                    // &.active{
+                    //     a{
+                    //         color: $blue;
+                    //     }
+                    // }
+                }
+                // &.top li a:hover{
+                //     color: $blue;
+                // }
+            }
+        }
+        .context{
+            nav{
+                background: $light2;
+                a{
+                    color: $dark2;
+                }
+                .fa-bars{
+                    color: $dark2;
+                }
+                form{
+                    .form-input{
+                        input{
+                            background: $grey2;
+                            color: $dark2;
+                        }
+                        button{
+                            color: $light2;
+                            // background: $blue2;
+                        }
+                    }
+                }
+                .switch-mode{
+                    background: $grey2;
+                }
+                #switch-mode:checked + .switch-mode::before{
+                    background: $dark2;
+                }
+
+                // .nav-link{
+                //     &:hover{
+                //         color: $blue;
+                //     }
+                // }
+
+
+            }
+
+        }
+
+    }
