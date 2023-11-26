@@ -491,11 +491,51 @@ body {
 .content main .table-data .todo .todo-form {
   width: 100%;
 }
-.content main .table-data .todo .todo-form form input {
+.content main .table-data .todo .todo-form form .item-group {
+  position: relative;
+  margin-bottom: 28px;
+}
+.content main .table-data .todo .todo-form form .item-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  transition: 0.4s ease;
+}
+.content main .table-data .todo .todo-form form .item-group .date {
+  padding-left: 85px;
+  padding-top: 8px;
+}
+.content main .table-data .todo .todo-form form .item-group .date:focus, .content main .table-data .todo .todo-form form .item-group .date:valid {
+  padding-left: 20px;
+}
+.content main .table-data .todo .todo-form form input, .content main .table-data .todo .todo-form form select {
   width: 100%;
   border-radius: 20px;
-  padding: 10px;
-  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #eee;
+}
+.content main .table-data .todo .todo-form form input:focus ~ label, .content main .table-data .todo .todo-form form input:valid ~ label, .content main .table-data .todo .todo-form form select:focus ~ label, .content main .table-data .todo .todo-form form select:valid ~ label {
+  color: #342e37;
+  top: -35px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.content main .table-data .todo .todo-form form input:focus, .content main .table-data .todo .todo-form form input:valid, .content main .table-data .todo .todo-form form select:focus, .content main .table-data .todo .todo-form form select:valid {
+  border: 2px solid #3c91e6;
+}
+.content main .table-data .todo .todo-form form .cancel:valid {
+  border: 1px solid #eee;
+}
+.content main .table-data .todo .todo-form form .submit {
+  background: transparent;
+  cursor: pointer;
+}
+.content main .table-data .todo .todo-form form .submit:hover {
+  background: #cfe8ff;
+  transform: scale(0.9);
 }
 
 ::-webkit-scrollbar {

@@ -506,15 +506,57 @@ body {
                 }
                 .todo-form{
                     width: 100%;
-                    // background: red;
                     form{
-                        input{
+                        .item-group{
+                            position: relative;
+                            margin-bottom: 28px;
+                            label{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                padding: 10px 20px;
+                                transition: 0.4s ease;
+                            }
+                            .date{
+                                padding-left: 85px;
+                                padding-top: 8px;
+                                &:focus,&:valid{
+                                    padding-left: 20px;
+                                }
+                            }
+                        }
+
+                        input,select{
                             width: 100%;
                             border-radius: 20px;
-                            padding: 10px;
-                            margin-top: 15px;
-                            // display: flex;
-                            // gap: 20px;
+                            padding: 10px 20px;
+                            font-size: 1rem;
+                            outline: none;
+                            border: 1px solid $grey;
+                            &:focus ~ label,
+                            &:valid ~ label{
+                                color: $dark;
+                                top: -35px;
+                                font-size: 1rem;
+                                font-weight: 700;
+                            }
+                            &:focus,&:valid{
+                                border: 2px solid $blue;
+                            }
+                        }
+                        .cancel:valid{
+                            border: 1px solid $grey;
+                        }
+                        // .cancel:focus,&:valid{
+                        //     border: 2px solid $blue;
+                        // }
+                        .submit{
+                            background: transparent;
+                            cursor: pointer;
+                            &:hover{
+                                background: $light-blue;
+                                transform: scale(0.9);
+                            }
                         }
                     }
                 }

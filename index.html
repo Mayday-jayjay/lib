@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>輔大圖書館國璽樓登記系統</title>
     <link rel="stylesheet" href="./scss/all.css">
+    <!-- sweetalert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- font-awesome ajax -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -231,14 +232,35 @@
                         <i class="fas fa-filter"></i>
                     </div>
                     <div class="todo-form">
-                        <form action="">
-                            <input type="date" name="date">
-                            <input type="number" name="number">
-                            <input list="browsers" name="browser" id="browser">
-                            <datalist id="browsers">
-                                <option value="閉館">
-                            </datalist>
-                            <input type="submit" value="送出">
+                        <form action="#" method="post" name="open">
+                            <!-- 樓層 -->
+                            <div class="item-group">
+                                <select name="floor" id="floor" required>
+                                    <option value="" disabled selected >請選擇樓層</option>
+                                    <option value="3樓">3樓</option>
+                                    <option value="5樓">5樓</option>
+                                </select>
+                            </div>
+                            <!-- 開館時間 -->
+                            <div class="item-group">
+                                <input class="date" type="date" name="date" id="open"required>
+                                <label for="open">開館時間</label>
+                            </div>
+
+                            <!-- 進館人數 -->
+                            <div class="item-group">
+                                <input type="number" name="sum" id="sum"  required>
+                                <label for="sum">進館人數</label>
+                            </div>
+                            <!-- 其他 -->
+                            <div class="item-group">
+                                <select name="others" id="others" class="cancel">
+                                    <option value="" disabled selected >其他＊無則不填</option>
+                                    <option value="閉館">閉館</option>
+                                    <option value="閉館">國定假日</option>
+                                </select>
+                            </div>
+                            <input name="submit" class="submit " type="submit" value="送出">
                         </form>
                     </div>
                     <!-- <ul class="todo-list">
@@ -261,14 +283,9 @@
                     </ul> -->
                 </div>
             </div>
-
         </main>
     </section>
-    
 
-
-    
-
-    <script src="./script/script.js"></script>
+    <script src="./script/script.js"></script> 
 </body>
 </html>
