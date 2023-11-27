@@ -134,11 +134,11 @@
                     </ul>
                 </div>
                 <!-- download -->
-                <!-- <a href="#" class="download-btn">
+                <a href="#" class="download-btn">
                     <i class="fas fa-cloud-download-alt">
-                        <span class="text">Download Report</span>
+                        <span class="text login-btn">新增資料</span>
                     </i>
-                </a> -->
+                </a>
             </div>
             <!-- box info -->
             <div class="box-info">
@@ -166,8 +166,99 @@
                     </li> -->
                 <!-- </ul> -->
             </div>
-            <!-- table -->
+
             <div class="table-data">
+                <!-- 新增資料 -->
+                <!-- <div class="form-group">
+                    <div class="todo">
+                        <div class="head">
+                            <h3>新增資料</h3>
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div class="todo-form">
+                            <form action="#" method="post" name="open">
+                                <div class="item-group">
+                                    <select name="floor" id="floor" required>
+                                        <option value="" disabled selected >請選擇樓層</option>
+                                        <option value="3樓">3樓</option>
+                                        <option value="5樓">5樓</option>
+                                    </select>
+                                </div>
+                                <div class="item-group">
+                                    <input class="date" type="date" name="date" id="open"required>
+                                    <label for="open">開館時間</label>
+                                </div>
+                                <div class="item-group">
+                                    <input type="number" name="sum" id="sum"  required>
+                                    <label for="sum">進館人數</label>
+                                </div>
+                                <div class="item-group">
+                                    <select name="others" id="others" class="cancel">
+                                        <option value="" disabled selected >其他＊無則不填</option>
+                                        <option value="閉館">閉館</option>
+                                        <option value="閉館">國定假日</option>
+                                    </select>
+                                </div>
+                                <input name="submit" class="submit " type="submit" value="送出">
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- 新增資料 -->
+                <div class="todo">
+                    <div class="head">
+                        <h3>新增資料</h3>
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <div class="todo-form">
+                        <form action="#" method="post" name="open">
+                            <div class="item-group">
+                                <select name="floor" id="floor" required>
+                                    <option value="" disabled selected >請選擇樓層</option>
+                                    <option value="3樓">3樓</option>
+                                    <option value="5樓">5樓</option>
+                                </select>
+                            </div>
+                            <div class="item-group">
+                                <input class="date" type="date" name="date" id="open"required>
+                                <label for="open">開館時間</label>
+                            </div>
+                            <div class="item-group">
+                                <input type="number" name="sum" id="sum"  required>
+                                <label for="sum">進館人數</label>
+                            </div>
+                            <div class="item-group">
+                                <select name="others" id="others" class="cancel">
+                                    <option value="" disabled selected >其他＊無則不填</option>
+                                    <option value="閉館">閉館</option>
+                                    <option value="閉館">國定假日</option>
+                                </select>
+                            </div>
+                            <input name="submit" class="submit " type="submit" value="送出">
+                        </form>
+                    </div>
+                    <!--  -->
+                    <!-- <ul class="todo-list">
+                        <li class="not-completed">
+                            <p>Todo List</p>
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </li>
+                        <li class="not-completed">
+                            <p>Todo List</p>
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </li>
+                        <li class="completed">
+                            <p>Todo List</p>
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </li>
+                        <li class="completed">
+                            <p>Todo List</p>
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </li>
+                    </ul> -->
+                </div>
                 <!-- 歷史紀錄 -->
                 <div class="order">
                     <div class="head">
@@ -175,7 +266,10 @@
                         <i class="fas fa-search"></i>
                         <i class="fas fa-filter"></i>
                     </div>
-                    <table>
+                    <iframe src="https://script.google.com/macros/s/AKfycbyLRz4P_MMpMEhcZgRHetzSuWXkOVhZXyZOlSRQarRbXTx1WQsmfq_-YwnfOoTbNXAkKg/exec" 
+                        width="100%" frameborder="0" marginheight="0" marginwidth="0">
+                    </iframe>
+                    <!-- <table>
                         <thead>
                             <tr>
                                 <th>日期</th>
@@ -222,65 +316,7 @@
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
-                </div>
-                <!-- 新增資料 -->
-                <div class="todo">
-                    <div class="head">
-                        <h3>新增資料</h3>
-                        <i class="fas fa-plus"></i>
-                        <i class="fas fa-filter"></i>
-                    </div>
-                    <div class="todo-form">
-                        <form action="#" method="post" name="open">
-                            <!-- 樓層 -->
-                            <div class="item-group">
-                                <select name="floor" id="floor" required>
-                                    <option value="" disabled selected >請選擇樓層</option>
-                                    <option value="3樓">3樓</option>
-                                    <option value="5樓">5樓</option>
-                                </select>
-                            </div>
-                            <!-- 開館時間 -->
-                            <div class="item-group">
-                                <input class="date" type="date" name="date" id="open"required>
-                                <label for="open">開館時間</label>
-                            </div>
-
-                            <!-- 進館人數 -->
-                            <div class="item-group">
-                                <input type="number" name="sum" id="sum"  required>
-                                <label for="sum">進館人數</label>
-                            </div>
-                            <!-- 其他 -->
-                            <div class="item-group">
-                                <select name="others" id="others" class="cancel">
-                                    <option value="" disabled selected >其他＊無則不填</option>
-                                    <option value="閉館">閉館</option>
-                                    <option value="閉館">國定假日</option>
-                                </select>
-                            </div>
-                            <input name="submit" class="submit " type="submit" value="送出">
-                        </form>
-                    </div>
-                    <!-- <ul class="todo-list">
-                        <li class="not-completed">
-                            <p>Todo List</p>
-                            <i class="fas fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="not-completed">
-                            <p>Todo List</p>
-                            <i class="fas fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="completed">
-                            <p>Todo List</p>
-                            <i class="fas fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="completed">
-                            <p>Todo List</p>
-                            <i class="fas fa-ellipsis-vertical"></i>
-                        </li>
-                    </ul> -->
+                    </table> -->
                 </div>
             </div>
         </main>

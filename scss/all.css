@@ -417,8 +417,15 @@ body {
   cursor: pointer;
 }
 .content main .table-data .order {
-  flex-grow: 1;
+  flex-grow: 3;
   flex-basis: 500px;
+}
+.content main .table-data .order iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .content main .table-data .order table {
   width: 100%;
@@ -536,19 +543,6 @@ body {
 .content main .table-data .todo .todo-form form .submit:hover {
   background: #cfe8ff;
   transform: scale(0.9);
-}
-
-::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-  background: #d9d9d9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #3c91e6;
-  border-radius: 5rem;
 }
 
 @media (max-width: 768px) {

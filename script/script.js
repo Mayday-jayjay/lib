@@ -10,15 +10,10 @@ const form = document.forms['open']
     form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(openURL, { method: 'POST', body: new FormData(form)})
-        .then(response => form.reset(), swal("資料已成功上傳", "試算表名稱：進館人數", "success"))
+        .then(response => location.reload(), form.reset(), swal("資料已成功上傳", "試算表名稱：進館人數", "success"))
         .catch(error => swal("資料上傳失敗", "請確認表單名稱是否有誤？", "error"))
-        // console.error('Error!', error.message)
+        // console.error('Error!', error.message)  location.reload();
     })
-
-
-
-
-
 
 // let switchMode = document.querySelector('#switch-mode');
 let switchMode = document.getElementById("switch-mode");
@@ -71,6 +66,11 @@ searchBtn.addEventListener("click",(e)=>{
     }
 })
 
+// show login-btn
+// const showPopuBtn = document.querySelector(".login-btn");
+// showPopuBtn.addEventListener("click",()=>{
+//     document.body.classList.toggle("show-popup")
+// })
 
 
 
