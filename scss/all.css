@@ -419,14 +419,13 @@ body {
 .content main .table-data .order {
   flex-grow: 3;
   flex-basis: 500px;
-  height: 500px;
+  width: 100%;
+  height: 1800px;
 }
 .content main .table-data .order iframe {
   width: 100%;
   height: 100%;
   border: none;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 .content main .table-data .order table {
   width: 100%;
