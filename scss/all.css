@@ -419,6 +419,7 @@ body {
 .content main .table-data .order {
   flex-grow: 3;
   flex-basis: 500px;
+  height: 500px;
 }
 .content main .table-data .order iframe {
   width: 100%;

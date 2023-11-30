@@ -14,6 +14,7 @@ const form = document.forms['open']
         .catch(error => swal("資料上傳失敗", "請確認表單名稱是否有誤？", "error"))
         // console.error('Error!', error.message)  location.reload();
     })
+    
 
 // let switchMode = document.querySelector('#switch-mode');
 let switchMode = document.getElementById("switch-mode");
