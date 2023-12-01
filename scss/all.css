@@ -397,17 +397,10 @@ body {
   color: #342e37;
   height: 100%;
 }
-.content main .table-data > div {
-  border-radius: 20px;
-  background: #f9f9f9;
-  padding: 24px;
-  height: 100%;
-}
 .content main .table-data iframe {
   width: 100%;
   height: 100vh;
   border: none;
-  margin-bottom: 10px;
 }
 .content main .table-data .head {
   display: flex;
