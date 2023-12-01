@@ -407,12 +407,23 @@ body {
             // max-height: 850px;
             // background: red;
             
-            // & > div{
-            //     border-radius: 20px;
-            //     background: $light;
-            //     padding: 24px;
-            //     overflow-x: auto;
-            // }
+            & > div{
+                border-radius: 20px;
+                background: $light;
+                padding: 24px;
+                height: 100%;
+                // overflow-x: auto;
+            }
+            iframe{
+                width: 100%;
+                // height: 650px;
+                height: 100vh;
+                // display: block;
+                border: none;
+                // overflow-y: auto;
+                // overflow-x: hidden;
+                margin-bottom:10px;
+            }
 
             // .form-group{
             //     background: red;
@@ -444,18 +455,9 @@ body {
                 flex-basis: 500px;
                 width: 100%;
                 height: 850px;
-                background: red;
+                // background: red;
                 padding: 5px;
-                iframe{
-                    width: 100%;
-                    // height: 650px;
-                    height: 100%;
-                    // display: block;
-                    border: none;
-                    // overflow-y: auto;
-                    // overflow-x: hidden;
-                    margin-bottom:10px;
-                }
+  
                 table{
                     width: 100%;
                     border-collapse: collapse;
