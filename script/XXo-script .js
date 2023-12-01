@@ -2,7 +2,19 @@
 let navLink = document.querySelectorAll('.nav-link');
 let menuBar = document.querySelector('.menu-btn');
 let sideBar = document.querySelector('.sidebar');
+// 進館人數
+const openURL = 'https://script.google.com/macros/s/AKfycbzENICgupl0gMiFPfiv8NXWLLkvCo2xqucyDeleJ4iwkgEoME0n10vnAg33AplkG616CA/exec';
 
+// 進館人數
+const form = document.forms['open']
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(openURL, { method: 'POST', body: new FormData(form)})
+        .then(response => location.reload(), form.reset(), swal("資料已成功上傳", "試算表名稱：進館人數", "success"))
+        .catch(error => swal("資料上傳失敗", "請確認表單名稱是否有誤？", "error"))
+        // console.error('Error!', error.message)  location.reload();
+    })
+    
 
 // let switchMode = document.querySelector('#switch-mode');
 let switchMode = document.getElementById("switch-mode");
@@ -33,6 +45,9 @@ switchMode.addEventListener("change",(e)=>{
         document.body.classList.remove("dark");
     }
 })
+
+
+
 
 // search
 let searchFrom = document.querySelector(".content nav form");

@@ -609,6 +609,7 @@ body {
 @media(max-width:768px){
     .sidebar{
         width: 200px;
+        // background: red;
         .logo span{
             display: none;
         }
@@ -622,6 +623,9 @@ body {
     }
 }
 @media(max-width:576px){
+    // .sidebar{
+    //     width: 150px;
+    // }
     .content nav form .form-input input{
         display: none;
     }
