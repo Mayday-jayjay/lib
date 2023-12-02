@@ -4,11 +4,6 @@ let menuBar = document.querySelector('.menu-btn');
 let sideBar = document.querySelector('.sidebar');
 
 
-// 主頁面
-// 主頁面
-iframe.contentWindow.postMessage('Hello from main window!', '*');
-
-
 // let switchMode = document.querySelector('#switch-mode');
 let switchMode = document.getElementById("switch-mode");
 const body = document.querySelector('body'); 
