@@ -6,7 +6,9 @@ let sideBar = document.querySelector('.sidebar');
 
 // test
 // 獲取 iframe 元素
+// 主頁面
 var iframe = document.getElementById('myIframe');
+iframe.contentWindow.postMessage('Hello from main window!', 'https://mayday-jayjay.github.io/lib/');
 
 // 在主窗口中註冊一個事件監聽器來接收消息
 window.addEventListener('message', receiveMessage, false);
