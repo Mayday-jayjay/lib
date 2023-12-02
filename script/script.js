@@ -3,7 +3,6 @@ let navLink = document.querySelectorAll('.nav-link');
 let menuBar = document.querySelector('.menu-btn');
 let sideBar = document.querySelector('.sidebar');
 
-
 // let switchMode = document.querySelector('#switch-mode');
 let switchMode = document.getElementById("switch-mode");
 const body = document.querySelector('body'); 
