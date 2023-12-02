@@ -4,29 +4,10 @@ let menuBar = document.querySelector('.menu-btn');
 let sideBar = document.querySelector('.sidebar');
 
 
-// test
-// 獲取 iframe 元素
 // 主頁面
-var iframe = document.getElementById('myIframe');
-iframe.contentWindow.postMessage('Hello from main window!', 'https://mayday-jayjay.github.io/lib/');
+// 主頁面
+iframe.contentWindow.postMessage('Hello from main window!', '*');
 
-// 在主窗口中註冊一個事件監聽器來接收消息
-window.addEventListener('message', receiveMessage, false);
-
-function receiveMessage(event) {
-  // 確保消息來自預期的 iframe
-  if (event.source === iframe.contentWindow) {
-    // 在這裡處理接收到的消息
-    console.log('Received message from iframe:', event.data);
-  }
-}
-
-// 發送消息給 iframe
-function sendMessageToIframe() {
-  var message = 'Hello from the main window!';
-  // 向 iframe 發送消息
-  iframe.contentWindow.postMessage(message, '*');
-}
 
 // let switchMode = document.querySelector('#switch-mode');
 let switchMode = document.getElementById("switch-mode");
