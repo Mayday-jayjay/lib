@@ -17,6 +17,11 @@ body {
     overflow-x: hidden;
   }
 // left nav
+// .test-checkbox{
+//     z-index: 99999;
+//     background: red;
+//     position: fixed;
+// }
 .sidebar{
     position: fixed;
     top: 0;
@@ -595,6 +600,7 @@ body {
 }
 
 
+
 // ::-webkit-scrollbar{
 //     width: 0.5rem;
 // }
@@ -604,6 +610,12 @@ body {
 // ::-webkit-scrollbar-thumb{
 //     background: $blue;
 //     border-radius: 5rem;
+// }
+
+// [id^=btn]:checked ~ .sidebar {
+//     z-index: 9999;
+//     width: 55px;
+//     background-color: red;
 // }
 
 @media(max-width:768px){
