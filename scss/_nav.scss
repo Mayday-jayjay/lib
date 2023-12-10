@@ -323,13 +323,14 @@ body {
                 display: flex;
                 align-items: center;
                 gap: 12px;
+                color: $dark;
                 i{
                     color: $dark;
                 }
                 li{
                     color: $dark;
                     a{
-                        color: $grey2;
+                        color: $dark;
                         pointer-events: none;
                         &.active{
                             color: $blue;
