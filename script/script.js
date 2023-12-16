@@ -1,4 +1,3 @@
-
 let navLink = document.querySelectorAll('.nav-link');
 let menuBar = document.querySelector('.menu-btn');
 let sideBar = document.querySelector('.sidebar');
