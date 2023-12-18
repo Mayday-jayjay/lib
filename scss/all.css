@@ -44,8 +44,8 @@ body {
   display: none;
 }
 .sidebar .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.44rem;
+  font-weight: 600;
   height: 56px;
   position: static;
   top: 0;
@@ -65,7 +65,7 @@ body {
 .sidebar .logo .text {
   text-align: center;
   margin: 2px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #3c91e6;
 }
 .sidebar .logo img {
@@ -270,7 +270,7 @@ body {
   flex-wrap: wrap;
 }
 .content main .head-title .left h1 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 600;
   margin-bottom: 10px;
   color: #fbfbfb;
