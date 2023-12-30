@@ -9,8 +9,9 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- font-awesome ajax -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
-<body class="light">
+<body class="dark">
     <!-- left nav -->
     <section class="sidebar">
         <!-- logo -->
@@ -24,47 +25,29 @@
         </a>
         <!-- menu -->
         <ul class="side-menu top">
-            <li class="active">
+            <li>
             <!-- <li> -->
                 <a href="./index.html" class="nav-link">
-                    <i class="fas fa-border-all"></i>
+                    <i class="fa fa-book" aria-hidden="true"></i>
                     <span class="text">刷還紀錄</span>
                 </a>
             </li>
             <li>
                 <a href="./money.html" class="nav-link">
-                    <i class="fas fa-chart-simple"></i>
+                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
                     <span class="text">櫃檯現金</span>
                 </a>
             </li>
             <li>
                 <a href="./enterLib.html" class="nav-link">
-                    <i class="fas fa-border-all"></i>
+                    <i class="fa fa-users" aria-hidden="true"></i>
                     <span class="text">進館人數</span>
                 </a>
             </li>
-            <li>
-                <a href="./penalty.html" class="nav-link">
+            <li class="active">
+                <a href="./lend.html" class="nav-link">
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="text">罰款</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link">
-                    <i class="fas fa-message"></i>
-                    <span class="text">結帳</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link">
-                    <i class="fas fa-people-group"></i>
-                    <span class="text">臨櫃建檔</span>
-                </a>
-            </li>
-                <li>
-                <a href="#" class="nav-link">
-                    <i class="fas fa-people-group"></i>
-                    <span class="text">學生證掛失</span>
+                    <span class="text">讀者借用</span>
                 </a>
             </li>
         </ul>
@@ -72,8 +55,8 @@
         <ul class="side-menu">
             <!-- 統計分析 -->
             <li>
-                <a href="#">
-                    <i class="fas fa-cog"></i>
+                <a href="./lose.html">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                     <span>遺失物</span>
                 </a>
             </li>
@@ -88,8 +71,6 @@
     <!-- right context -->
     <section class="content">
         <nav>
-            <!-- <i class="fas fa-bars menu-btn"></i> -->
-            <!-- <a href="#" class="nav-link">快速搜尋</a> -->
             <form action="#">
                 <div class="form-input">
                     <input type="search" placeholder="search...">
@@ -108,6 +89,7 @@
 
             <a href="#" class="profile">
                 <img src="./images/bg1.jpg" alt="">
+
             </a>
         </nav>
         <!-- content -->
@@ -115,10 +97,10 @@
             <div class="head-title">
                 <!-- current location -->
                 <div class="left">
-                    <h1>刷還紀錄</h1>
+                    <h1>讀者借用</h1>
                     <ul class="breadcrumb">
                         <li>
-                            <a href="#">刷還紀錄</a>
+                            <a href="#">讀者借用</a>
                         </li>
                         <i class="fas fa-chevron-right"></i>
                         <li>
@@ -127,14 +109,14 @@
                     </ul>
                 </div>
                 <!-- download -->
-                <a href="#" class="download-btn">
-                    <i class="fas fa-cloud-download-alt">
-                        <span class="text login-btn">新增資料</span>
+                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1bwuYCal-NS_puh4zql2xl_WFs6hwbM95M-gTI2Bpb44/edit#gid=0" class="download-btn">
+                    <i class="fa fa-file" aria-hidden="true">
+                        <span class="text login-btn">前往試算表</span>
                     </i>
                 </a>
             </div>
             <div class="table-data">
-                <iframe id="iframe" src="https://script.google.com/macros/s/AKfycbz3CpysptXSQZ7WPFBmkP1p8lTCeEh2Ze6ZLy-tDfupF4wxap_JPft3lRTksiIIML0SVw/exec">
+                <iframe id="iframe" src="https://script.google.com/macros/s/AKfycby9Fse33HXf734PMV1SWzo2-MgkINGlmfiXi0moNpfnCk-zCnLTE426-4SKTUHnh9dI/exec"></iframe>
             </div>
         </main>
     </section>
